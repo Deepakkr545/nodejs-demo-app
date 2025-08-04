@@ -10,8 +10,55 @@ const PORT = process.env.PORT || 3000;
 // Home route
 app.get('/', (req, res) => {
     res.send(`
-        <h1>Welcome to the Node.js Demo App</h1>
-        <p> Deployed using GitHub Actions & Docker</p>
+        <html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome | Node.js App</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-top: 0;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 2rem 3rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .emoji {
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to My Node.js App</h1>
+    <p>Deployed using <strong>GitHub Actions</strong> & <strong>Docker</strong></p>
+  </div>
+</body>
+</html>
         `);
 });
 
